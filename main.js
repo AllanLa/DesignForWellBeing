@@ -10,12 +10,22 @@ detector.detectAllExpressions();
 detector.detectAllEmojis();
 detector.detectAllAppearance();
 
+
+detector.addEventListener("onImageResultsSuccess", function(faces, image, timestamp) {
+        console.log("face success here");
+      });
+
+detector.addEventListener("onWebcamConnectFailure", function() {
+        console.log("Webcam access denied");
+      });
+
 function onStart() {
 	if (detector && !detector.isRunning) {
 		console.log("Detector Started");
 		detector.start();
      }     
  }
+
 
 function generateMeme() {
 	//have javascript to log in now
