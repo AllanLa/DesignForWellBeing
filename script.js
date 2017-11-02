@@ -120,7 +120,7 @@ detector.addEventListener("onImageResultsSuccess", function(faces, image,
     }
 }*/
 
-function generateMeme() {
+function generateGif() {
     //have javascript to log in now
     giphyData = {}
     maxVal = -1
