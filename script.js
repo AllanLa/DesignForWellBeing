@@ -123,7 +123,7 @@ detector.addEventListener("onImageResultsSuccess", function(faces, image,
 }*/
 
 function generateGif() {
-    if (generated){    
+    if (generated){
         removePrevious();
     }
 
@@ -147,7 +147,7 @@ function generateMeme() {
 
     maxEmotion = getRandomEmotion(); //findMaxEmotion();
 
-    if (generated){    
+    if (generated){
         removePrevious();
     }
 
@@ -156,32 +156,32 @@ function generateMeme() {
 
     img.onload = function() {
       div.appendChild(img);
-    };    
-    
+    };
+
     var random;
     if (maxEmotion == "joy"){
         random = getRandomHappyImage();
         img.src = 'Memes/Happy/'+random;
-    } 
+    }
 
     else if (maxEmotion == "sadness"){
         random = getRandomSadImage();
-        img.src = 'Memes/Sad/'+random;        
+        img.src = 'Memes/Sad/'+random;
     }
 
     else if (maxEmotion == "anger"){
         random = getRandomAngerImage();
-        img.src = 'Memes/Anger/'+random;        
+        img.src = 'Memes/Anger/'+random;
     }
 
     else if (maxEmotion == "disgust"){
         random = getRandomDigustImage();
-        img.src = 'Memes/Disgust/'+random;        
+        img.src = 'Memes/Disgust/'+random;
     }
 
     else{
         random = getRandomSurpriseImage();
-        img.src = 'Memes/Surprise/'+random;        
+        img.src = 'Memes/Surprise/'+random;
     }
 
     generated = true;
@@ -190,40 +190,40 @@ function generateMeme() {
 
 function generateQuotes() {
     //have javascript to log in now
-    if (generated){    
+    if (generated){
         removePrevious();
-    }    
+    }
     console.log("Generating Quotes");
     generated = true;
 }
 
 function getRandomEmotion(){
   var images = ["joy", "sadness", "surprise", "disgust", "anger" ];
-  return images[Math.floor(Math.random() * images.length)];    
+  return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomHappyImage() {
-  var images = ["happy1.png","happy2.png","happy3.jpg", "happy4.jpg", "happy5.jpg" ];
+  var images = ["happy1.png","happy2.png","happy3.jpg", "happy4.jpg", "happy5.jpg", "happy6.jpg", "happy7.jpg", "happy8.jpg", "happy9.jpg", "happy10.jpg" ];
   return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomSadImage() {
-  var images = ["sad1.jpg","sad2.jpg","sad3.jpg", "sad4.jpg", "sad5.jpg", "sad6.jpg", "sad7.jpg", "sad8.jpg" ];
+  var images = ["sad1.jpg","sad2.jpg","sad3.jpg", "sad4.jpg", "sad5.jpg", "sad6.jpg", "sad7.jpg", "sad8.jpg", "sad9.jpg", "sad10.jpg" ];
   return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomAngerImage() {
-  var images = ["AngerMeme1.jpg","AngerMeme2.jpg","AngerMeme3.jpg", "AngerMeme4.jpeg", "AngerMeme5.jpg", "AngerMeme6.jpg", "AngerMeme7.jpg", "AngerMeme8.jpg" ];
+  var images = ["AngerMeme1.jpg","AngerMeme2.jpg","AngerMeme3.jpg", "AngerMeme4.jpeg", "AngerMeme5.jpg", "AngerMeme6.jpg", "AngerMeme7.jpg", "AngerMeme8.jpg", "AngerMeme9.jpeg", "AngerMeme10.jpeg" ];
   return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomDigustImage() {
-  var images = ["DisgustMeme1.jpg","DisgustMeme2.jpeg","DisgustMeme3.jpg", "DisgustMeme4.jpeg", "DisgustMeme5.jpg", "DisgustMeme6.jpg"];
+  var images = ["DisgustMeme1.jpg","DisgustMeme2.jpeg","DisgustMeme3.jpg", "DisgustMeme4.jpeg", "DisgustMeme5.jpg", "DisgustMeme6.jpg", "DisgustMeme7.jpg", "DisgustMeme8.jpeg", "DisgustMeme9.jpg", "DisgustMeme10.jpeg"];
   return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomSurpriseImage() {
-  var images = ["SurpriseMeme1.jpg","SurpriseMeme2.gif","SurpriseMeme3.jpg", "SurpriseMeme4.jpeg"];
+  var images = ["SurpriseMeme1.jpg","SurpriseMeme2.gif","SurpriseMeme3.jpg", "SurpriseMeme4.jpeg", "SurpriseMeme5.jpg", "SurpriseMeme6.jpg", "SurpriseMeme7.jpg", "SurpriseMeme8.jpeg", "SurpriseMeme9.jpg", "SurpriseMeme10.jpg"];
   return images[Math.floor(Math.random() * images.length)];
 }
 
