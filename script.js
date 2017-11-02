@@ -223,7 +223,7 @@ function getRandomDigustImage() {
 }
 
 function getRandomSurpriseImage() {
-  var images = ["SurpriseMeme1.jpg","SurpriseMeme2.gif","SurpriseMeme3.jpg", "SurpriseMeme4.jpeg"];
+  var images = ["SurpriseMeme1.jpg","SurpriseMeme2.gif","SurpriseMeme3.jpg", "SurpriseMeme4.jpg"];
   return images[Math.floor(Math.random() * images.length)];
 }
 
