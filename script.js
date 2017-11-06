@@ -19,7 +19,7 @@ detector.detectAllEmojis();
 detector.addEventListener("onInitializeSuccess", function() {
     log('#logs', "The detector reports initialized");
     //Display canvas instead of video feed because we want to draw the feature points on it
-    $("#buttons").css("display", "block");
+    $("#buttonDivFooter").css("display", "flex");
     $("#face_video_canvas").css("display", "block");
     $("#face_video").css("display", "none");
 });
@@ -220,12 +220,12 @@ function getRandomEmotion() {
 }
 
 function getRandomHappyImage() {
-    var images = ["happy1.png", "happy2.png", "happy3.jpg", "happy4.jpg", "happy5.jpg", "happy6.jpg", "happy7.jpg", "happy8.jpg", "happy9.jpg", "happy10.jpg"];
+    var images = ["happy1.png", "happy2.png", "happy3.jpg", "happy4.jpg", "happy5.jpg", "happy6.jpg", "happy7.jpg", "happy8.jpg", "happy9.jpeg", "happy10.jpg"];
     return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomSadImage() {
-    var images = ["sad1.jpg", "sad2.jpg", "sad3.jpg", "sad4.jpg", "sad5.jpg", "sad6.jpg", "sad7.jpg", "sad8.jpg", "sad9.jpg", "sad10.jpg"];
+    var images = ["sad1.jpg", "sad2.jpg", "sad3.jpg", "sad4.jpg", "sad5.jpg", "sad6.jpg", "sad7.jpg", "sad8.jpg", "sad9.jpeg", "sad10.jpg"];
     return images[Math.floor(Math.random() * images.length)];
 }
 

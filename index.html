@@ -17,28 +17,28 @@
     <!-- the entire window container -->
     <div class="container-fluid">
         <!--START: container for top half of window; goes from above the start/stop/reset buttons to the top of screen -->
+        <div class="buttons" id="buttonDivHeader">
+            <button id="start" type="button" class="header-button btn btn-success btn-lg"onclick="onStart()">Start</button>
+            <button type="button" class="header-button btn btn-danger btn-lg" id="stop" onclick="onStop()">Stop</button>
+            <button type="button" class="header-button btn btn-info btn-lg" id="reset" onclick="onReset()">Reset</button>
+        </div>
         <div class="row">
             <!-- camera container: col-md-8 (child) & affdex_elements (parent selector) -->
             <div class="col-md-8" id="affdex_elements" style="width:680px;height:480px; display: none"></div>
             <div class="image" id="gifDiv"></div>
-            <div>
+            <div class="logMessages">
                 <strong>DETECTOR LOG MSGS</strong>
             </div>
-            <div id="logs"></div>
+            <div class="logMessages" id="logs"></div>
         </div>
         <!-- END of RIGHT SIDE container– the emotion tracking results and detector log msgs -->
     </div>
     <!-- END of UPPER SCREEN container– camera & logs -->
     <!-- START: container that holds bottom half of screen– start/stop/reset buttons, Affectiva detector title, instructions -->
-    <div>
-        <button id="start" onclick="onStart()">Start</button>
-        <button id="stop" onclick="onStop()">Stop</button>
-        <button id="reset" onclick="onReset()">Reset</button>
-        <div id="buttons" style="display: none">
-            <button onclick="generateGif()">Generate Gif</button>
-            <button onclick="generateMeme()">Generate Meme</button>
-            <button onclick="generateQuote()">Generate Quote</button>
-        </div>
+    <div class="buttons" id="buttonDivFooter" style="display: none">
+        <button type="buttons" class="generateButton btn btn-outline-primary btn-lg" onclick="generateGif()">Generate Gif</button>
+        <button type="buttons" class="generateButton btn btn-outline-warning btn-lg" onclick="generateMeme()">Generate Meme</button>
+        <button type="buttons" class="generateButton btn btn-outline-info btn-lg" onclick="generateQuote()">Generate Quote</button>
     </div>
     <!-- END: BOTTOM half of SCREEN container -->
     </div>
