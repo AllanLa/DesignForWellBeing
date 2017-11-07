@@ -246,28 +246,27 @@ function getRandomSurpriseImage() {
 }
 
 function getRandomHappyQuote() {
-    var images = ["HappyQuote1.jpg", "HappyQuote2.jpg", "HappyQuote3.jpg", "HappyQuote4.jpg"];
+    var images = ["HappyQuote1.jpg", "HappyQuote2.jpg", "HappyQuote3.jpg", "HappyQuote4.jpg", "HappyQuote5.jpg", "HappyQuote6.jpeg", "HappyQuote7.jpg", "HappyQuote8.jpg", "HappyQuote9.jpg", "HappyQuote10.jpg"];
     return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomSadQuote() {
-    var images = ["SadQuote1.jpg", "SadQuote2.jpg", "SadQuote3.jpg", "SadQuote4.jpg"];
+    var images = ["SadQuote1.jpg", "SadQuote2.jpg", "SadQuote3.jpg", "SadQuote4.jpg", "SadQuote5.png", "SadQuote6.png", "SadQuote7.jpeg", "SadQuote8.jpg", "SadQuote9.jpg", "SadQuote10.jpg"];
     return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomAngerQuote() {
-    var images = ["AngerQuote1.jpg", "AngerQuote2.jpg", "AngerQuote3.jpg", "AngerQuote4.jpg"];
+    var images = ["AngerQuote1.jpg", "AngerQuote2.jpg", "AngerQuote3.jpg", "AngerQuote4.jpg", "AngerQuote5.png", "AngerQuote6.jpg", "AngerQuote7.jpeg", "AngerQuote8.jpg", "AngerQuote9.png", "AngerQuote10.jpeg"];
     return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomDigustQuote() {
-    var images = ["DisgustQuote1.jpg", "DisgustQuote2.jpg", "DisgustQuote3.jpg", "DisgustQuote4.jpg"];
+    var images = ["DisgustQuote1.jpg", "DisgustQuote2.jpg", "DisgustQuote3.jpg", "DisgustQuote4.jpg", "DisgustQuote5.jpg", "DisgustQuote6.jpg", "DisgustQuote7.jpeg"];
     return images[Math.floor(Math.random() * images.length)];
 }
 
 function getRandomSurpriseQuote() {
-
-    var images = ["SurpriseQuote1.jpg", "SurpriseQuote2.jpg", "SurpriseQuote3.jpg", "SurpriseQuote4.jpg"];
+    var images = ["SurpriseQuote1.jpg", "SurpriseQuote2.jpg", "SurpriseQuote3.jpg", "SurpriseQuote4.jpg", "SurpriseQuote5.jpg", "SurpriseQuote6.jpg", "SurpriseQuote7.jpg", "SurpriseQuote8.jpg", "SurpriseQuote9.jpg", "SurpriseQuote10.jpg"];
     return images[Math.floor(Math.random() * images.length)];
 }
 
