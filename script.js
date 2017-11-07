@@ -149,7 +149,7 @@ function generateGif() {
 //joy , sadness, disgust , anger, surprise
 
 function generateMeme() {
-    maxEmotion = getRandomEmotion(); // findMaxEmotion();
+    maxEmotion = findMaxEmotion();
     if (generated) {
         removePrevious();
     }
@@ -183,7 +183,7 @@ function generateMeme() {
 
 function generateQuote() {
 
-    maxEmotion = getRandomEmotion(); // findMaxEmotion();
+    maxEmotion = findMaxEmotion();
     if (generated) {
         removePrevious();
     }
@@ -241,7 +241,7 @@ function getRandomDigustImage() {
 
 function getRandomSurpriseImage() {
 
-    var images = ["SurpriseMeme1.jpg", "SurpriseMeme2.gif", "SurpriseMeme3.jpg", "SurpriseMeme4.jpeg", "SurpriseMeme5.jpg", "SurpriseMeme6.jpg", "SurpriseMeme7.jpg", "SurpriseMeme8.jpeg", "SurpriseMeme9.jpg", "SurpriseMeme10.jpg"];
+    var images = ["SurpriseMeme1.jpg", "SurpriseMeme2.gif", "SurpriseMeme3.jpg", "SurpriseMeme4.jpg", "SurpriseMeme5.jpg", "SurpriseMeme6.jpg", "SurpriseMeme7.jpg", "SurpriseMeme8.jpeg", "SurpriseMeme9.jpg", "SurpriseMeme10.jpg"];
     return images[Math.floor(Math.random() * images.length)];
 }
 
@@ -280,10 +280,12 @@ function findMaxEmotion() {
     var maxEmotion
     emotionData["engagement"] = 0;
     emotionData["valence"] = 0;
+    emotionData["fear"] = 0;
+    emotionData["contempt"] = 0;
     for (var key in emotionData) {
         if (emotionData.hasOwnProperty(key)) {
-            /*                console.log(emotionData[key]);
-             */
+            console.log(key);
+
             var val = emotionData[key];
             if (val > maxVal) {
                 maxEmotion = key;
@@ -291,6 +293,20 @@ function findMaxEmotion() {
             }
         }
     }
+    var color;
+    var body = $("body");
+    if (maxEmotion == "joy") {
+        $('body').css("background-color", "#FFF176");
+    } else if (maxEmotion == "sadness") {
+        $('body').css("background-color", "#5C6BC0");
+    } else if (maxEmotion == "disgust") {
+        $('body').css("background-color", "#8E24AA");
+    } else if (maxEmotion == "anger") {
+        $('body').css("background-color", "#E91E63");
+    } else if (maxEmotion == "surprise") {
+        $('body').css("background-color", "#64B5F6");
+    }
+
     console.log(maxEmotion);
     return maxEmotion;
 }
