@@ -6,15 +6,18 @@
 
 /* This will style any <img> element in .image div */
 
-/*.image img {
+.image {
     height: 100%;
-   width: 100%;
-}*/
+    width: 100%;
+}
 
 .row {
     height: 70%;
-    overflow:auto;
+    overflow: auto;
+}
 
+.buttons {
+    margin-top: 2%;
 }
 
 #gifDiv {
@@ -30,7 +33,7 @@
 }
 
 .logMessages {
-    display: flex !important;
+    display: flex;
     justify-content: center;
     align-items: flex-end;
 }
@@ -41,4 +44,62 @@
 
 .generateButton {
     margin-right: 50px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    /*background-color: rgba(3, 3, 3, 0.83);*/
+    background-color: #1E1E1E;
+}
+
+#author {
+    bottom: 1.4em;
+    left: 2em;
+}
+
+#author a {
+    text-decoration: none;
+    /*color: white;*/
+    color: #a8a8a8;
+}
+
+#blog a {
+    text-decoration: none;
+    /*color: white;*/
+    color: #a8a8a8;
+}
+
+#blog a:hover {
+    /*color: #607D8B;*/
+    color: #ededed;
+}
+
+#author a:hover {
+    /*color: #607D8B;*/
+    color: #ededed;
+}
+
+.footer a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    /*color: #dbdbdb;*/
+    color: #8B8B8B;
+    text-decoration: none;
+    position: fixed;
+    height: auto;
+}
+
+.footer-part {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    /*color: #dbdbdb;*/
+    color: #a8a8a8;
+    text-decoration: none;
+    right: 1vh;
+    bottom: 1.4em;
 }

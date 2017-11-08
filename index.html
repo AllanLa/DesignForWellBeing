@@ -18,18 +18,19 @@
     <div class="container-fluid">
         <!--START: container for top half of window; goes from above the start/stop/reset buttons to the top of screen -->
         <div class="buttons" id="buttonDivHeader">
-            <button id="start" type="button" class="header-button btn btn-success btn-lg"onclick="onStart()">Start</button>
+            <button id="start" type="button" class="header-button btn btn-success btn-lg" onclick="onStart()">Start</button>
             <button type="button" class="header-button btn btn-danger btn-lg" id="stop" onclick="onStop()">Stop</button>
             <button type="button" class="header-button btn btn-info btn-lg" id="reset" onclick="onReset()">Reset</button>
         </div>
         <div class="row">
             <!-- camera container: col-md-8 (child) & affdex_elements (parent selector) -->
             <div class="col-md-8" id="affdex_elements" style="width:680px;height:480px; display: none"></div>
-            <div class="image" id="gifDiv"></div>
-            <div class="logMessages">
-                <strong>DETECTOR LOG MSGS</strong>
-            </div>
             <div class="logMessages" id="logs"></div>
+
+            <div class="image" id="gifDiv"></div>
+            <!-- <div class="logMessages">
+                <strong>DETECTOR LOG MSGS</strong>
+            </div> -->
         </div>
         <!-- END of RIGHT SIDE container– the emotion tracking results and detector log msgs -->
     </div>
@@ -45,6 +46,11 @@
     <!-- END: ENTIRE SCREEN container -->
     <!-- Connect locally-hosted default affectiva camera script that makes everything work-->
     <script src="script.js"></script>
+    <footer>
+        <div id="author" class="footer-part">&#66;&#121; <a href="https://www.linkedin.com/in/ukumaran" target="_blank">Uttam Kumaran</a> &amp;<a href="https://www.linkedin.com/in/wesleymorlock/" target="_blank"> Wesley Morlock </a> &amp;
+            <a href="https://www.linkedin.com/in/jenna-slusar-821252104" target="_blank"> Jenna Slusar </a>&amp; <a href="https://www.linkedin.com/in/allanla/" target="_blank"> Allan La</a></div>
+        <div id="blog" class="footer-part"><a href="https://medium.com/takeafive" target="_blank">Medium Design Doc</a></div>
+    </footer>
 </body>
 
 </html>

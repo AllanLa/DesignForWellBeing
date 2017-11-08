@@ -17,11 +17,13 @@ detector.detectAllEmojis();
 
 //Add a callback to notify when the detector is initialized and ready for runing.
 detector.addEventListener("onInitializeSuccess", function() {
-    log('#logs', "The detector reports initialized");
-    //Display canvas instead of video feed because we want to draw the feature points on it
+    /*    log('#logs', "The detector reports initialized");
+     */ //Display canvas instead of video feed because we want to draw the feature points on it
     $("#buttonDivFooter").css("display", "flex");
     $("#face_video_canvas").css("display", "block");
     $("#face_video").css("display", "none");
+    $("#logs").css("display", "none");
+
 });
 
 function log(node_name, msg) {
@@ -31,7 +33,7 @@ function log(node_name, msg) {
 //function executes when Start button is pushed.
 function onStart() {
     if (detector && !detector.isRunning) {
-        $("#logs").html("");
+        $("#logs").html("Turning the wheels, give me one sec!");
         detector.start();
     }
     //log('#logs', "Clicked the start button");
@@ -58,20 +60,20 @@ function onReset() {
 
 //Add a callback to notify when camera access is allowed
 detector.addEventListener("onWebcamConnectSuccess", function() {
-    log('#logs', "Webcam access allowed");
-    console.log("Webcam access allowed");
+    /*log('#logs', "Webcam access allowed");
+    console.log("Webcam access allowed");*/
 });
 
 //Add a callback to notify when camera access is denied
 detector.addEventListener("onWebcamConnectFailure", function() {
-    log('#logs', "webcam denied");
-    console.log("Webcam access denied");
+/*    log('#logs', "webcam denied");
+*/    console.log("Webcam access denied");
 });
 
 //Add a callback to notify when detector is stopped
 detector.addEventListener("onStopSuccess", function() {
-    log('#logs', "The detector reports stopped");
-    $("#results").html("");
+/*    log('#logs', "The detector reports stopped");
+*/    $("#results").html("");
 });
 
 //Add a callback to receive the results from processing an image.
@@ -220,7 +222,7 @@ function getRandomEmotion() {
 }
 
 function getRandomHappyImage() {
-    var images = ["happy1.png", "happy2.png", "happy3.jpg", "happy4.jpg", "happy5.jpg", "happy6.jpg", "happy7.jpg", "happy8.jpg", "happy9.jpeg", "happy10.jpg"];
+    var images = ["happy1.png", "happy2.png", "happy3.jpg", "happy4.jpg", "happy5.jpg", "happy6.jpg", "happy7.png", "happy8.jpg", "happy9.jpeg", "happy10.jpg"];
     return images[Math.floor(Math.random() * images.length)];
 }
 
