@@ -135,7 +135,7 @@ function generateGif() {
     var totalNumGifs = 35;
     var maxEmotion = findMaxEmotion();
     console.log("Max Emotion: " + maxEmotion);
-    var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + maxEmotion + "&api_key=0MVjiemZMnv3N9Oh55IpB8SeYSf1ugLd&limit=" + totalNumGifs);
+    var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=" + maxEmotion + "&api_key=0MVjiemZMnv3N9Oh55IpB8SeYSf1ugLd&limit=" + totalNumGifs);
     xhr.done(function(data) {
         console.log(data);
         var randomNum = Math.floor(Math.random() * totalNumGifs);
