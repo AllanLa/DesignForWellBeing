@@ -46,6 +46,9 @@ function onStop() {
         detector.removeEventListener();
         detector.stop();
     }
+    if (generated) {
+        removePrevious();
+    }
 };
 
 //function executes when the Reset button is pushed.
@@ -55,6 +58,9 @@ function onReset() {
         detector.reset();
 
         $('#results').html("");
+    }
+    if (generated) {
+        removePrevious();
     }
 };
 
