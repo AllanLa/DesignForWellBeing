@@ -48,6 +48,7 @@ function onStop() {
     }
     if (generated) {
         removePrevious();
+        generated = false;
     }
 };
 
@@ -61,6 +62,7 @@ function onReset() {
     }
     if (generated) {
         removePrevious();
+        generated = false;
     }
 };
 
